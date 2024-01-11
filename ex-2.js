@@ -4,16 +4,16 @@ const singleNumber = function (nums) {
   let dublicateNumber = [];
   let numbers = [];
   nums.map((item) => {
-    console.log(dublicateNumber.indexOf(item), item);
+    //console.log(dublicateNumber.indexOf(item), item);
     numbers.indexOf(item) < 0 ? numbers.push(item) : dublicateNumber.push(item);
   });
-  console.log(numbers);
-  console.log(dublicateNumber);
+  //console.log(numbers);
+  //console.log(dublicateNumber);
   const result = numbers.filter((item) => {
     return !dublicateNumber.includes(item);
   });
-  console.log(result);
-  return result;
+  //console.log(result);
+  return result[0];
 };
 
 const result1 = singleNumber([2, 2, 1]);
