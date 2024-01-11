@@ -1,7 +1,13 @@
 // Exercise 1: Length of Last Word
 
 const lengthOfLastWord = function (s) {
-  //Start coding here
+  const sentence = s.replace(/[^a-zA-Z0-9]/g, " ").split(" ");
+  word = sentence.filter((item) => {
+    return item !== "";
+  });
+  word.reverse();
+  return word[0].length;
+  console.log(word);
 };
 
 const result1 = lengthOfLastWord("Hello World");
